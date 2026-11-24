@@ -1,0 +1,75 @@
+/* ==========================================================================
+   Oakline — Builds page styles
+   Loaded after services.css, which provides the shared interior-page
+   pieces (intro, offer headings, card grid, steps, FAQ).
+   ========================================================================== */
+
+/* ---------- After launch ---------- */
+.after__grid { display: grid; gap: 2.5rem; }
+@media (min-width: 64rem) {
+  .after__grid {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: clamp(3rem, 1rem + 5vw, 6rem);
+    align-items: center;
+  }
+}
+.after__links { border-top: 1px solid var(--ink); }
+.after__links li { border-bottom: 1px solid var(--line-strong); }
+
+/* ---------- Two ways to work ---------- */
+.ways { display: grid; gap: 1rem; margin-top: clamp(2.5rem, 2rem + 2vw, 3.5rem); }
+@media (min-width: 48rem) { .ways { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.ways__col {
+  padding: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.ways__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  font-size: 1.375rem;
+  letter-spacing: -0.02em;
+}
+.ways__title span {
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+  background: var(--bg-alt);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.ways__list { margin-top: 1.1rem; }
+.ways__list li {
+  position: relative;
+  padding: 0.85rem 0 0.85rem 1.75rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.ways__list li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 1.2rem;
+  width: 0.7rem;
+  height: 0.4rem;
+  border-left: 1.75px solid var(--oak);
+  border-bottom: 1.75px solid var(--oak);
+  transform: rotate(-45deg);
+}
+.ways__list strong { color: var(--ink); font-weight: 600; }
+.ways__design {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--ink);
+  background: var(--bg-alt);
+  font-size: 0.9688rem;
+  color: var(--ink-2);
+}

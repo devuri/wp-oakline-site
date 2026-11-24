@@ -1,0 +1,464 @@
+/* ==========================================================================
+   Oakline — Services page styles, and shared interior-page pieces
+   (page intro, offer headings, card grid, steps, FAQ) reused by Builds and
+   Site Care. Depends on tokens and components in main.css.
+   ========================================================================== */
+
+/* ---------- Page intro ---------- */
+.page-hero {
+  padding-block: clamp(3rem, 2rem + 4vw, 5.5rem) clamp(3rem, 2rem + 3vw, 4.5rem);
+}
+.page-hero__title {
+  margin-top: 1.25rem;
+  font-size: clamp(2.375rem, 1.6rem + 3vw, 3.75rem);
+  font-weight: 780;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  max-width: 18ch;
+}
+.page-hero__lead {
+  margin-top: 1.5rem;
+  font-size: var(--fs-lead);
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 48ch;
+}
+
+.jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 2.25rem;
+}
+.jump a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0.5rem 0.95rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--card);
+  font-size: 0.9063rem;
+  font-weight: 550;
+  color: var(--ink-2);
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.jump a:hover { border-color: var(--ink); color: var(--ink); }
+.page-hero__note { margin-top: 1.25rem; font-size: 0.875rem; color: var(--muted); }
+
+/* ---------- Shared offer heading ---------- */
+.offer-head {
+  display: grid;
+  gap: 2.5rem 4rem;
+  margin-bottom: clamp(2.25rem, 1.8rem + 2vw, 3.25rem);
+}
+.offer-head--single { gap: 0; }
+@media (min-width: 64rem) {
+  .offer-head:not(.offer-head--single) { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+}
+.offer-head__title {
+  margin-top: 0.9rem;
+  font-size: var(--fs-h2);
+  line-height: 1.05;
+  letter-spacing: -0.027em;
+}
+.offer-head__text {
+  margin-top: 1.1rem;
+  color: var(--muted);
+  max-width: 48ch;
+}
+
+/* What's covered */
+.covered {
+  padding: 1.5rem 1.75rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.covered__title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.covered__list {
+  display: grid;
+  gap: 0.6rem 2rem;
+  margin-top: 1rem;
+  font-size: 0.9063rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+@media (min-width: 40rem) { .covered__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.covered__list strong {
+  display: block;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-size: 0.9688rem;
+}
+
+/* ---------- Backstop tiers ---------- */
+.tiers {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 40rem) { .tiers { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 64rem) { .tiers { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+.tier {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem 1.5rem 1.6rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.tier--featured { border-color: var(--ink); box-shadow: inset 0 3px 0 var(--ink); }
+.tier__tag {
+  position: absolute;
+  top: 1.75rem;
+  right: 1.5rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 2px;
+  background: var(--oak-tint);
+  color: var(--oak-ink);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.tier__name {
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.tier__price {
+  margin-top: 1.1rem;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+}
+.tier__from,
+.price__from,
+.sprint__price span,
+.more-card__price span {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.tier__unit { font-size: 1rem; font-weight: 600; letter-spacing: 0; color: var(--muted); margin-left: 0.15rem; }
+.tier__desc {
+  margin-top: 1.1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.9063rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.backstop__foot {
+  display: grid;
+  gap: 1.75rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+@media (min-width: 64rem) {
+  .backstop__foot { grid-template-columns: minmax(0, 1fr) auto; gap: 3rem; }
+}
+.terms { display: grid; gap: 0.75rem; }
+.terms div { display: grid; grid-template-columns: 5.5rem minmax(0, 1fr); gap: 1rem; font-size: 0.9375rem; }
+.terms dt {
+  padding-top: 0.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.terms dd { color: var(--ink-2); max-width: 64ch; }
+@media (max-width: 30rem) {
+  .terms div { grid-template-columns: 1fr; gap: 0.2rem; }
+  .backstop__foot .btn { width: 100%; }
+}
+
+/* ---------- Emergency ---------- */
+.emergency__card {
+  display: grid;
+  gap: 2.5rem;
+  padding: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--signal);
+  border-radius: var(--radius);
+}
+@media (min-width: 64rem) {
+  .emergency__card { grid-template-columns: minmax(0, 1fr) auto; gap: 4rem; align-items: center; }
+}
+.emergency__label { color: var(--signal); }
+.emergency__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--signal); }
+.emergency__copy .offer-head__title { margin-top: 0.9rem; }
+
+.flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.75rem;
+  counter-reset: flow;
+}
+.flow li {
+  counter-increment: flow;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.8rem 0.45rem 0.5rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 550;
+  color: var(--ink-2);
+}
+.flow li::before {
+  content: counter(flow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+}
+
+.emergency__buy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 15rem;
+}
+@media (min-width: 64rem) {
+  .emergency__buy { padding-left: 3rem; border-left: 1px solid var(--line); }
+}
+.price {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--ink);
+}
+.price__terms { margin-top: 0.6rem; font-size: 0.9375rem; color: var(--muted); }
+.emergency__buy .btn { margin-top: 1.5rem; }
+@media (max-width: 30rem) { .emergency__buy .btn { width: 100%; } }
+
+/* ---------- Sprints ---------- */
+.sprint-grid { display: grid; gap: 1rem; }
+@media (min-width: 52rem) { .sprint-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.sprint {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem 1.5rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.sprint__name { font-size: 1.3125rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
+.sprint__desc { margin-top: 0.6rem; font-size: 0.9375rem; color: var(--muted); }
+.sprint__scope {
+  display: grid;
+  gap: 0.45rem;
+  margin-block: 1.25rem 1.75rem;
+  font-size: 0.9063rem;
+  color: var(--ink-2);
+}
+.sprint__scope li { position: relative; padding-left: 1.3rem; }
+.sprint__scope li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.75em;
+  width: 0.6rem;
+  height: 1px;
+  background: var(--ink);
+}
+.sprint__price {
+  margin-top: auto;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+}
+.sprints__note { margin-top: 1.5rem; font-size: 0.875rem; color: var(--muted); max-width: 70ch; }
+
+/* ---------- Site Care + Ops Review ---------- */
+.more__grid { display: grid; gap: 1rem; }
+@media (min-width: 52rem) { .more__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.more-card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  scroll-margin-top: calc(var(--header-h) + 1.5rem);
+}
+.more-card--entry { background: transparent; border-style: dashed; border-color: var(--line-strong); }
+.more-card__title {
+  margin-top: 0.9rem;
+  font-size: clamp(1.625rem, 1.4rem + 0.9vw, 2.125rem);
+  line-height: 1.1;
+  letter-spacing: -0.027em;
+}
+.more-card__text { margin-top: 0.9rem; color: var(--muted); max-width: 46ch; }
+.more-card__foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  margin-top: auto;
+  padding-top: 1.75rem;
+}
+.more-card__price {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  line-height: 1;
+}
+
+/* ---------- FAQ layout ---------- */
+.faq__grid { display: grid; gap: 2.5rem; }
+@media (min-width: 64rem) {
+  .faq__grid { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: clamp(3rem, 1rem + 5vw, 6rem); align-items: start; }
+}
+.faq__title {
+  margin-top: 1rem;
+  font-size: var(--fs-h2);
+  line-height: 1.05;
+  letter-spacing: -0.027em;
+}
+.faq__contact { margin-top: 1.5rem; color: var(--muted); font-size: var(--fs-small); }
+.faq__contact a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px;
+}
+.faq__contact a:hover { text-decoration-color: var(--ink); }
+.faq__list { border-top: 1px solid var(--ink); }
+
+/* ---------- Shared: hero actions and numbered steps ---------- */
+.page-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+  margin-top: 2.25rem;
+}
+@media (max-width: 30rem) {
+  .page-hero__actions .btn { width: 100%; }
+}
+
+/* ---------- How it works: four steps ---------- */
+.steps {
+  display: grid;
+  gap: 1rem;
+  counter-reset: step;
+}
+@media (min-width: 40rem) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 64rem) { .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+.steps__item {
+  counter-increment: step;
+  padding-top: 1.25rem;
+  border-top: 2px solid var(--ink);
+}
+.steps__item::before {
+  content: counter(step, decimal-leading-zero);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.steps__item h3 {
+  margin-top: 0.6rem;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  letter-spacing: -0.018em;
+  line-height: 1.25;
+}
+.steps__item p {
+  margin-top: 0.5rem;
+  font-size: var(--fs-small);
+  color: var(--muted);
+}
+
+@media (min-width: 64rem) { .steps--three { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ---------- Shared: check list grid (Builds commitments, Site Care inclusions) ---------- */
+.promises {
+  display: grid;
+  gap: 1px;
+  margin-top: clamp(2.5rem, 2rem + 2vw, 3.5rem);
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+@media (min-width: 48rem) { .promises { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.promises li {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  padding: 1.35rem 1.5rem;
+  background: var(--card);
+  font-size: 0.9375rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.promises svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: none;
+  margin-top: 0.1rem;
+  padding: 2px;
+  color: var(--oak);
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+.promises strong {
+  display: block;
+  margin-bottom: 0.15rem;
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+
+/* Three smaller offers side by side on wide screens */
+@media (min-width: 72rem) { .more__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 52rem) and (max-width: 71.99rem) { .more-card--hours { grid-column: 1 / -1; } }
+.more-card__fine { margin-top: 0.75rem; font-size: 0.875rem; color: var(--muted); }
+.qa__a a { color: var(--ink); font-weight: 600; text-decoration: underline; text-decoration-color: var(--line-strong); text-underline-offset: 3px; }
+@media (min-width: 72rem) { .more__grid .more-card__foot { flex-direction: column; align-items: flex-start; gap: 1rem; } }

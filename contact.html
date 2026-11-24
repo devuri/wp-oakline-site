@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Fit Check | Oakline Technical Services</title>
+  <meta name="description" content="Book a fit check with Oakline. Five short questions about your sites or project, answered by engineering, not sales.">
+  <link rel="canonical" href="https://oaklinetech.net/contact.html">
+  <meta name="theme-color" content="#fcfcfa">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oakline Technical Services">
+  <meta property="og:title" content="Book a Fit Check | Oakline Technical Services">
+  <meta property="og:description" content="Book a fit check with Oakline. Five short questions about your sites or project, answered by engineering, not sales.">
+  <meta property="og:url" content="https://oaklinetech.net/contact.html">
+  <meta property="og:image" content="https://oaklinetech.net/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Book a Fit Check | Oakline Technical Services">
+  <meta name="twitter:description" content="Book a fit check with Oakline. Five short questions about your sites or project, answered by engineering, not sales.">
+  <meta name="twitter:image" content="https://oaklinetech.net/assets/img/og-image.png">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/services.css">
+  <link rel="stylesheet" href="css/contact.css">
+
+  </head>
+<body>
+
+<!-- Icon sprite: referenced below with <use href="#i-…">. -->
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:none">
+  <symbol id="i-arrow" viewBox="0 0 20 20"><path d="M3.5 10h12.5M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-check" viewBox="0 0 20 20"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 20 20"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============================== HEADER ============================== -->
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html" aria-label="Oakline Technical Services, home">
+      <span class="brand__name">Oakline</span>
+      <span class="brand__descriptor">Technical Services</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+      <span class="nav-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="site-nav__list">
+        <li><a class="site-nav__link" href="services.html">Services</a></li>
+        <li><a class="site-nav__link" href="builds.html">Builds</a></li>
+        <li><a class="site-nav__link" href="site-care.html">Site Care</a></li>
+        <li><a class="site-nav__link" href="about.html">About</a></li>
+        <li><a class="site-nav__link" href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+      <a class="btn btn--primary btn--small" href="contact.html">
+        Book a Fit Check <svg aria-hidden="true"><use href="#i-arrow"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-hero page-hero--compact" aria-labelledby="page-title">
+    <div class="container">
+      <p class="label">Fit Check</p>
+      <h1 class="page-hero__title" id="page-title">Tell us what you need handled.</h1>
+      <p class="page-hero__lead">Five short steps, about two minutes. Every fit check is read by engineering, not sales, and answered by email.</p>
+    </div>
+  </section>
+
+  <section class="section section--alt fc-section" aria-label="Fit Check form">
+    <div class="container fc-layout">
+
+      <div class="fc-panel">
+        <!-- FORM SERVICE: replace YOUR_FORM_ID with your Formspree form ID (e.g. https://formspree.io/f/abcdwxyz).
+             Until then the wizard shows a "not connected" notice instead of sending. -->
+        <form class="fc" id="fit-check" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+              data-booking-url="">
+
+          <div class="fc-progress" aria-hidden="true">
+            <div class="fc-progress__bar"><span></span></div>
+          </div>
+          <p class="fc-progress__text" id="fc-status" aria-live="polite">Step 1 of 5</p>
+
+          <!-- Step 1 -->
+          <fieldset class="fc-step" data-step="1">
+            <legend class="fc-step__title" tabindex="-1">What do you need?</legend>
+            <div class="choices">
+              <label class="choice choice--urgent"><input type="radio" name="need" value="urgent" required><span><strong>Something is broken</strong><small>Downtime, a failed launch, a hacked site, or a client escalation</small></span></label>
+              <label class="choice"><input type="radio" name="need" value="backstop"><span><strong>Ongoing technical backup</strong><small>Senior support across your sites</small></span></label>
+              <label class="choice"><input type="radio" name="need" value="sprint"><span><strong>Fix one specific problem</strong><small>Performance, security, or a migration</small></span></label>
+              <label class="choice"><input type="radio" name="need" value="build"><span><strong>A full build</strong><small>WordPress, WooCommerce, or custom PHP</small></span></label>
+              <label class="choice"><input type="radio" name="need" value="care"><span><strong>Care for a stable site</strong><small>Hosting, updates, backups, monitoring</small></span></label>
+              <label class="choice"><input type="radio" name="need" value="hours"><span><strong>A small one-off fix</strong><small>Senior Hours: $200 an hour, prepaid</small></span></label>
+              <label class="choice"><input type="radio" name="need" value="review"><span><strong>Not sure yet</strong><small>Start with an Ops Review</small></span></label>
+            </div>
+            <p class="fc-urgent" data-show-for="urgent">If a client site is down right now, email <a href="mailto:hello@oaklinetech.net?subject=URGENT%3A%20">hello@oaklinetech.net</a> with URGENT in the subject.</p>
+          </fieldset>
+
+          <!-- Step 2 (one branch shows, based on step 1) -->
+          <fieldset class="fc-step" data-step="2">
+            <legend class="fc-step__title" tabindex="-1">A little detail.</legend>
+
+            <div class="fc-branch" data-for="urgent">
+              <p class="fc-branch__for">If something is broken</p>
+              <p class="fc-q">What's happening?</p>
+              <div class="choices choices--compact">
+                <label class="choice"><input type="radio" name="urgent_issue" value="Site is down" data-required><span><strong>The site is down</strong></span></label>
+                <label class="choice"><input type="radio" name="urgent_issue" value="Hacked or infected"><span><strong>Hacked or infected</strong></span></label>
+                <label class="choice"><input type="radio" name="urgent_issue" value="Failed launch or migration"><span><strong>Failed launch or migration</strong></span></label>
+                <label class="choice"><input type="radio" name="urgent_issue" value="Something else"><span><strong>Something else</strong></span></label>
+              </div>
+              <label class="field">
+                <span class="field__label">Since when?</span>
+                <select name="urgent_since" data-required>
+                  <option value="">Choose one</option>
+                  <option>Today</option>
+                  <option>This week</option>
+                  <option>Longer than a week</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="fc-branch" data-for="backstop care review">
+              <p class="fc-branch__for">For ongoing backup, care, or a review</p>
+              <p class="fc-q">How many sites are we talking about?</p>
+              <div class="choices choices--compact">
+                <label class="choice"><input type="radio" name="site_count" value="1–10" data-required><span><strong>1–10</strong></span></label>
+                <label class="choice"><input type="radio" name="site_count" value="10–25"><span><strong>10–25</strong></span></label>
+                <label class="choice"><input type="radio" name="site_count" value="25–50"><span><strong>25–50</strong></span></label>
+                <label class="choice"><input type="radio" name="site_count" value="50–100"><span><strong>50–100</strong></span></label>
+                <label class="choice"><input type="radio" name="site_count" value="100+"><span><strong>100+</strong></span></label>
+              </div>
+            </div>
+
+            <div class="fc-branch" data-for="sprint">
+              <p class="fc-branch__for">For one specific problem</p>
+              <p class="fc-q">Which problem?</p>
+              <div class="choices choices--compact">
+                <label class="choice"><input type="radio" name="sprint_type" value="Performance" data-required><span><strong>Performance</strong><small>Slow or unstable pages</small></span></label>
+                <label class="choice"><input type="radio" name="sprint_type" value="Security"><span><strong>Security</strong><small>Cleanup and hardening</small></span></label>
+                <label class="choice"><input type="radio" name="sprint_type" value="Migration"><span><strong>Migration</strong><small>Hosting moves and launches</small></span></label>
+              </div>
+            </div>
+
+            <div class="fc-branch" data-for="build">
+              <p class="fc-branch__for">For a full build</p>
+              <p class="fc-q">What kind of build?</p>
+              <div class="choices choices--compact">
+                <label class="choice"><input type="radio" name="build_type" value="WordPress site" data-required><span><strong>WordPress site</strong></span></label>
+                <label class="choice"><input type="radio" name="build_type" value="WooCommerce store"><span><strong>WooCommerce store</strong></span></label>
+                <label class="choice"><input type="radio" name="build_type" value="Custom PHP application"><span><strong>Custom PHP application</strong></span></label>
+              </div>
+              <div class="field-row">
+                <label class="field">
+                  <span class="field__label">Is the design ready?</span>
+                  <select name="design_ready" data-required>
+                    <option value="">Choose one</option>
+                    <option>Yes, it's ready</option>
+                    <option>In progress</option>
+                    <option>Not yet</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span class="field__label">Target launch</span>
+                  <select name="launch_target" data-required>
+                    <option value="">Choose one</option>
+                    <option>Within a month</option>
+                    <option>1–3 months</option>
+                    <option>3+ months</option>
+                    <option>Flexible</option>
+                  </select>
+                </label>
+              </div>
+              <p class="fc-hint">We build from your design, so "not yet" is fine. It just affects timing.</p>
+            </div>
+            <div class="fc-branch" data-for="hours">
+              <p class="fc-branch__for">For a small one-off fix</p>
+              <label class="field">
+                <span class="field__label">What needs doing?</span>
+                <input type="text" name="task" placeholder="e.g. Contact form stopped sending emails" data-required>
+              </label>
+              <p class="fc-q">Roughly how long do you think it takes?</p>
+              <div class="choices choices--compact">
+                <label class="choice"><input type="radio" name="hours_estimate" value="1 hour" data-required><span><strong>1 hour</strong></span></label>
+                <label class="choice"><input type="radio" name="hours_estimate" value="2 hours"><span><strong>2 hours</strong></span></label>
+                <label class="choice"><input type="radio" name="hours_estimate" value="3 hours"><span><strong>3 hours</strong></span></label>
+                <label class="choice"><input type="radio" name="hours_estimate" value="Not sure"><span><strong>Not sure</strong></span></label>
+              </div>
+              <p class="fc-hint">Senior Hours are $200 each, bought in whole hours and paid before work starts. If it looks bigger than a few hours, we'll suggest a sprint instead.</p>
+            </div>
+          </fieldset>
+
+          <!-- Step 3 -->
+          <fieldset class="fc-step" data-step="3">
+            <legend class="fc-step__title" tabindex="-1">About you.</legend>
+            <p class="fc-q">Which describes you best?</p>
+            <div class="choices">
+              <label class="choice"><input type="radio" name="who" value="An agency" required><span><strong>An agency</strong><small>Marketing, SEO, design, or web</small></span></label>
+              <label class="choice"><input type="radio" name="who" value="A business with one main website"><span><strong>A business with one main website</strong><small>A site your business depends on</small></span></label>
+              <label class="choice"><input type="radio" name="who" value="A team running many sites"><span><strong>A team running many sites</strong><small>A portfolio or fleet you manage in-house</small></span></label>
+              <label class="choice"><input type="radio" name="who" value="A freelancer or consultant"><span><strong>A freelancer or consultant</strong><small>You need senior technical support for clients</small></span></label>
+              <label class="choice"><input type="radio" name="who" value="Something else"><span><strong>Something else</strong></span></label>
+            </div>
+            <p class="fc-q">Team size</p>
+            <div class="choices choices--compact">
+              <label class="choice"><input type="radio" name="team_size" value="Just me" required><span><strong>Just me</strong></span></label>
+              <label class="choice"><input type="radio" name="team_size" value="2–10"><span><strong>2–10</strong></span></label>
+              <label class="choice"><input type="radio" name="team_size" value="11–25"><span><strong>11–25</strong></span></label>
+              <label class="choice"><input type="radio" name="team_size" value="26+"><span><strong>26+</strong></span></label>
+            </div>
+          </fieldset>
+
+          <!-- Step 4 -->
+          <fieldset class="fc-step" data-step="4">
+            <legend class="fc-step__title" tabindex="-1">Rough budget for this work.</legend>
+            <p class="fc-hint fc-hint--top">Optional. It helps us suggest the right option. <a href="services.html">See starting prices</a>.</p>
+            <div class="choices choices--compact">
+              <label class="choice"><input type="radio" name="budget" value="Under $2,500"><span><strong>Under $2,500</strong></span></label>
+              <label class="choice"><input type="radio" name="budget" value="$2,500–$5,000"><span><strong>$2,500–$5,000</strong></span></label>
+              <label class="choice"><input type="radio" name="budget" value="$5,000–$10,000"><span><strong>$5,000–$10,000</strong></span></label>
+              <label class="choice"><input type="radio" name="budget" value="$10,000–$25,000"><span><strong>$10,000–$25,000</strong></span></label>
+              <label class="choice"><input type="radio" name="budget" value="$25,000+"><span><strong>$25,000+</strong></span></label>
+              <label class="choice"><input type="radio" name="budget" value="Not sure yet"><span><strong>Not sure yet</strong></span></label>
+            </div>
+          </fieldset>
+
+          <!-- Step 5 -->
+          <fieldset class="fc-step" data-step="5">
+            <legend class="fc-step__title" tabindex="-1">How should we reach you?</legend>
+            <div class="field-row">
+              <label class="field">
+                <span class="field__label">Your name</span>
+                <input type="text" name="name" autocomplete="name" required>
+              </label>
+              <label class="field">
+                <span class="field__label">Work email</span>
+                <input type="email" name="email" autocomplete="email" required>
+              </label>
+            </div>
+            <label class="field">
+              <span class="field__label">Website <span class="field__opt">optional</span></span>
+              <input type="text" name="website" autocomplete="url" placeholder="yourcompany.com" inputmode="url">
+            </label>
+            <label class="field">
+              <span class="field__label">Anything else we should know? <span class="field__opt">optional</span></span>
+              <textarea name="message" rows="4"></textarea>
+            </label>
+            <p class="fc-privacy">We only use these details to reply to your fit check. See the <a href="privacy.html">Privacy notice</a>.</p>
+          </fieldset>
+
+          <!-- Spam trap: real people never see or fill this -->
+          <div class="fc-trap" aria-hidden="true">
+            <label>Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+          </div>
+          <input type="hidden" name="_subject" value="New fit check">
+          <input type="hidden" name="came_from" value="">
+
+          <p class="fc-error" role="alert" hidden></p>
+
+          <div class="fc-nav">
+            <button class="btn btn--secondary fc-back" type="button">Back</button>
+            <button class="btn btn--primary fc-next" type="button">Continue <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <button class="btn btn--primary fc-send" type="submit">Send fit check <svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </div>
+        </form>
+
+        <div class="fc-done" id="fc-done" hidden>
+          <span class="fc-done__mark" aria-hidden="true"><svg><use href="#i-check"/></svg></span>
+          <h2 class="fc-done__title" tabindex="-1">Thanks<span data-done-name></span>. Your fit check is in.</h2>
+          <p class="fc-done__text">It goes straight to engineering, not sales. You'll get a reply by email.</p>
+          <dl class="fc-summary" data-summary></dl>
+          <a class="btn btn--primary fc-book" href="#" hidden>Pick a call time <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+
+      <aside class="fc-aside" aria-label="Before you start">
+        <div class="fc-aside__block">
+          <h2 class="fc-aside__title">A good fit</h2>
+          <ul class="fc-aside__list fc-aside__list--yes">
+            <li>Agencies managing client websites</li>
+            <li>Businesses whose website drives revenue</li>
+            <li>Teams running many WordPress or PHP sites</li>
+            <li>Teams without a senior engineer, or with one who's stretched thin</li>
+          </ul>
+        </div>
+        <div class="fc-aside__block">
+          <h2 class="fc-aside__title">What we don't do</h2>
+          <ul class="fc-aside__list fc-aside__list--no">
+            <li>Unlimited edits or open-ended support</li>
+            <li>Guaranteed search rankings</li>
+            <li>The lowest possible hourly rate</li>
+          </ul>
+        </div>
+        <div class="fc-aside__block">
+          <h2 class="fc-aside__title">Prefer email?</h2>
+          <p><a href="mailto:hello@oaklinetech.net">hello@oaklinetech.net</a></p>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================== FOOTER ============================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="brand" href="index.html" aria-label="Oakline Technical Services, home">
+          <span class="brand__name">Oakline</span>
+        </a>
+        <p>Senior technical backstop for agencies and the teams that run websites.</p>
+      </div>
+      <nav aria-label="Services">
+        <p class="site-footer__heading">Services</p>
+        <ul class="site-footer__links">
+          <li><a href="services.html#backstop">Technical Backstop</a></li>
+          <li><a href="services.html#emergency">Emergency Stabilization</a></li>
+          <li><a href="services.html#sprints">Technical Sprints</a></li>
+          <li><a href="site-care.html">Managed Site Care</a></li>
+          <li><a href="services.html#ops-review">Ops Review</a></li>
+          <li><a href="builds.html">Builds</a></li>
+          <li><a href="services.html#hours">Senior Hours</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <p class="site-footer__heading">Company</p>
+        <ul class="site-footer__links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Book a Fit Check</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="site-footer__heading">Contact</p>
+        <ul class="site-footer__links">
+          <li><a href="mailto:hello@oaklinetech.net">hello@oaklinetech.net</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <p>&copy; <span data-year>2026</span> Oakline Technical Services LLC</p>
+      <p class="site-footer__legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+<script src="js/fit-check.js" defer></script>
+</body>
+</html>
